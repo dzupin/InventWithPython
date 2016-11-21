@@ -55,7 +55,7 @@ windowSurface.blit(text, textRect)
 # draw the window onto the screen
 pygame.display.update()
 
-# run the game loop
+# run the game loop:
 while True:
     for event in pygame.event.get():
         if event.type == QUIT:

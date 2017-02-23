@@ -1,17 +1,31 @@
 # This is a guess the number game.
 import random
+import sys
 
 guessesTaken = 0
 
 print('Hello! What is your name?')
-myName = raw_input()   #In Python 2.x always don't use input() because until Python 3.x input() was broken by bugs
+#Select  Python 2 or 3 (input fuction is not working in Python 2 and raw_input is missing in Python 3)
+if sys.version_info[0]<3:
+    myName = raw_input()  # In Python 2.x always don't use input() because until Python 3.x input() was broken by bugs
+else:
+    myName = input()
+
+#For Python 3
+ #In Python 2.x always don't use input() because until Python 3.x input() was broken by bugs
 
 number = random.randint(1, 20)
 print('Well, ' + myName + ', I am thinking of a number between 1 and 20.')
 
 while guessesTaken < 6:
     print('Take a guess.') # There are four spaces in front of print.
-    guess = raw_input()
+
+    # Select  Python 2 or 3 (input fuction is not working in Python 2 and raw_input is missing in Python 3)
+    if sys.version_info[0] < 3:
+        guess = raw_input()  # In Python 2.x always don't use input() because until Python 3.x input() was broken by bugs
+    else:
+        guess = input()
+
     guess = int(guess)
     guessesTaken = guessesTaken + 1
     if guess < number:

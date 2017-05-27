@@ -1,6 +1,6 @@
 # This is a guess the number game.
 import random
-import sys
+import sys     # Used to retrieve Python version number (to select between Python2 or Python3 specific code)
 
 guessesTaken = 0
 
@@ -20,7 +20,7 @@ print('Well, ' + myName + ', I am thinking of a number between 1 and 20.')
 while guessesTaken < 6:
     print('Take a guess.') # There are four spaces in front of print.
     if sys.version_info[0] < 3:
-        guess = raw_input()   # Python2.7
+        guess = raw_input()    #Python2.7
     else:
         guess = input()        #Python on 3.X
     guess = int(guess)

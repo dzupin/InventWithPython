@@ -1,6 +1,7 @@
 #http://inventwithpython.com/chapters/
 import pygame, random, sys
 from pygame.locals import *
+#prerequisites for UBUNTU (to play sound): sudo apt-get install  timidity
 
 WINDOWWIDTH = 600
 WINDOWHEIGHT = 600
